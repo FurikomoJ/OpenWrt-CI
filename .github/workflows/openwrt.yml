@@ -7,7 +7,7 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: OpenWrt
+name: Xiaomi Router
 
 on:
   push:
@@ -40,9 +40,6 @@ jobs:
           git clone https://github.com/coolsnowwolf/lede
           cp .config ./lede/.config
           mv ./lede/* ./
-      - name: Install Helloword
-        run: |
-          echo "src-git helloworld https://github.com/fw876/helloworld" >> ./feeds.conf.default 
       - name: Install OpenClash
         run: |
           mkdir package/luci-app-openclash
